@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Sanity limpieza y aprovisionamiento de recursos" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-03-30T15:57:32" hostname="22LAP5CD1195R94" time="25.961">
+  <properties/>
+  <testcase name="se requiere realizar una portabilidad prepago" classname="Sanity limpieza y aprovisionamiento de recursos" time="25.961">
+    <failure message="java.lang.AssertionError: el status es PIN_REQUEST_ACEPTADO&#10;Expected: &quot;PIN_REQUEST_SOLICITADO&quot;&#10;     but: was &quot;PIN_REQUEST_ACEPTADO&quot;" type="java.lang.AssertionError">java.lang.AssertionError: el status es PIN_REQUEST_ACEPTADO
+Expected: &quot;PIN_REQUEST_SOLICITADO&quot;
+     but: was &quot;PIN_REQUEST_ACEPTADO&quot;
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at com.indra.actions.PortabilityPrepaidActions.makePortabilityRequestAndDB(PortabilityPrepaidActions.java:37)
+	at com.indra.steps_definitions.SanitySteps.seHaceLaSolicitudDePortabilidadPrepago(SanitySteps.java:279)
+	at ✽.se hace la solicitud de portabilidad prepago(src/test/resources/features/execute.feature:94)
+</failure>
+  </testcase>
+  <system-out><![CDATA[10:57:33.561 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Instantiating driver
+10:57:33.561 [Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ProvideNewDriver - Driver capabilities: Capabilities {acceptInsecureCerts: true, browserName: firefox, firefox_profile: org.openqa.selenium.firefox..., headless: false, loggingPrefs: org.openqa.selenium.logging..., marionette: true, moz:firefoxOptions: {}, platform: ANY, version: }
+10:57:38.703 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Opening darkroom
+10:57:38.704 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Darkroom processing line starting up
+10:57:38.882 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\505e6849a59f23caa50316930ba0fe99aae7daaf3ede0ae10996fa27772f375a.png
+10:57:39.287 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\560b47e9bdb8e6dab7dab102bf305b29920e56c82a8683e0cf7c7940b0c2e543.png
+10:57:44.203 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\2fdf1e7de3e3f80c8ba5bb73db39280a770e65dfed6b91224b352ca2ba14773f.png
+Delete siebel.CX_DEVICE_MSISDN - Exitoso
+Delete SIEBEL.cx_device_chip - Exitoso
+10:57:46.372 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\2fdf1e7de3e3f80c8ba5bb73db39280a770e65dfed6b91224b352ca2ba14773f.png
+10:57:46.974 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\f52de4e69e162682e6dea956f0a17493e8293f56ca57d37f7d9692e90295ccd2.png
+10:57:47.532 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\334f700978ec9fdc57e276ad4182ab6015eeddd390ba62bec622e90dccf3ca09.png
+10:57:48.089 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\6eddba5ed3e9da79dad97897c47af34efe3ba77824bbce523081f03c4152f5e2.png
+10:57:49.045 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\083fe9c93cd4dbad9176f6f78d2ec9db2dd23263fd6a66882bf30a3835c9bcce.png
+10:57:49.618 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\7a94decee88508754510a70342eade843334872ddcffc6785d709965f5e2b20a.png
+10:57:51.793 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\3661f53724f84e59c9d21ccffca71a61ac686e9627fe660b2376528bc21ba1f1.png
+10:57:52.408 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\3d66ba7e5578d18e5e7650ad25d28e233b173d658120d0ee42da0114e2eab342.png
+10:57:52.966 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\e02ef00c65118ac67e237e69d58e28388064fabcde5ef2ac21c9fbbf82e8f3fb.png
+10:57:53.506 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\2dfc5acebf2ae8ea58e81e74a51a342806758035fe87a0b20ba5f52e07de7735.png
+10:57:54.315 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\4a690cc76aafa7714bc63c6af09cb4036d4d67bd363a5019c859d154e38b86d5.png
+10:57:54.898 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\995b7d589b35116de51ae67afaa411d32b8ce91a9ca87fd97ce4259d114af79f.png
+10:57:54.900 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Processing screenshot image in /var/screenshots/screenshot-1361730302173717070
+10:57:54.900 [Darkroom Processing Line] DEBUG net.serenitybdd.core.photography.DarkroomProcessingLine - Saving screenshot to C:\SanitySemilla6\target\site\serenity\995b7d589b35116de51ae67afaa411d32b8ce91a9ca87fd97ce4259d114af79f.png
+3045984642
+Update PIN_REQUEST_ACEPTADO - Exitoso
+10:57:56.398 [Test worker] DEBUG net.serenitybdd.core.photography.Darkroom - Send negative for processing for C:\SanitySemilla6\target\site\serenity\995b7d589b35116de51ae67afaa411d32b8ce91a9ca87fd97ce4259d114af79f.png
+10:57:58.328 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91m
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
+
+TEST FAILED: se requiere realizar una portabilidad prepago
+--------------------------------------------------------------------------?[0m
+10:57:58.330 [Test worker] DEBUG net.thucydides.core.steps.ConsoleLoggingListener - RELATED ISSUES: 
+10:57:58.418 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91mTEST FAILED AT STEP When se hace la solicitud de portabilidad prepago?[0m
+10:57:58.418 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - el status es PIN_REQUEST_ACEPTADOExpected: "PIN_REQUEST_SOLICITADO" but: was "PIN_REQUEST_ACEPTADO"
+]]></system-out>
+  <system-err><![CDATA[mar 30, 2022 10:57:33 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+mar 30, 2022 10:57:33 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFORMACIÓN: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+1648655854331	geckodriver	INFO	Listening on 127.0.0.1:36810
+1648655854928	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\PROJEC~1\\AppData\\Local\\Temp\\rust_mozprofilexE2rwA"
+1648655855492	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1648655855552	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1648655855552	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1648655855552	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1648655855552	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+1648655857249	Marionette	INFO	Listening on port 51898
+1648655857588	Marionette	WARN	TLS certificate errors will be ignored for this session
+mar 30, 2022 10:57:37 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMACIÓN: Detected dialect: W3C
+JavaScript error: http://10.69.60.84:8280/portal/scripts/3.8.16.Final-redhat-1/SHARED/bootstrap-min.js, line 7: Error: Script error for: SHARED/base
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: http://10.69.60.84:8280/portal/scripts/3.8.16.Final-redhat-1/SHARED/bootstrap-min.js, line 7: Error: Script error for: SHARED/jquery
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: http://10.69.60.84:8280/portal/scripts/3.8.16.Final-redhat-1/SHARED/bootstrap-min.js, line 7: Error: Script error for: SHARED/navigation
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript warning: http://10.69.60.84:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript warning: http://10.69.60.84:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript error: http://10.69.60.84:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
+JavaScript warning: http://10.69.60.84:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript warning: http://10.69.60.84:8280/portal/CRMPortal/Consultas?portal:windowState=normal&portal:componentId=gtnc323725e-6efe-4037-9f93-1bc06edfa941&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript error: http://10.69.60.84:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
+JavaScript error: http://10.69.60.84:8280/portal/CRMPortal/Consultas, line 1: ReferenceError: setIframeListeners is not defined
+JavaScript warning: http://10.69.60.84:8280/portal/CRMPortal/Preventa?portal:windowState=normal&portal:componentId=gtnac4fa497-8304-4e12-8e75-0ee02636d5e8&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript warning: http://10.69.60.84:8280/portal/CRMPortal/Preventa?portal:windowState=normal&portal:componentId=gtnac4fa497-8304-4e12-8e75-0ee02636d5e8&portal:resourceID=/org.rf.res/org/richfaces/ui.pack.js&portal:cacheLevel=PAGE&portal:type=resource&portal:portletMode=view, line 10431: unreachable code after return statement
+JavaScript error: http://10.69.60.84:8280/portal/CRMPortal/Preventa, line 1: ReferenceError: setIframeListeners is not defined
+JavaScript error: http://10.69.60.74:8080/PinRequestWEB/xmlhttp/1648650521364/icefaces-d2d.js, line 16: TypeError: F is undefined
+JavaScript error: http://10.69.60.84:8280/portal/CRMPortal/Preventa, line 1: ReferenceError: setIframeListeners is not defined
+1648655876693	Marionette	INFO	Stopped listening on port 51898
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+]]></system-err>
+</testsuite>
