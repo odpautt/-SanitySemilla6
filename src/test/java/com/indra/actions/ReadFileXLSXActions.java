@@ -14,7 +14,7 @@ import java.util.Iterator;
 
 public class ReadFileXLSXActions {
     public ArrayList<ArrayList<String>> excelArray = new ArrayList<>();
-
+    public ArrayList<ArrayList<String>> excelArray2 = new ArrayList<>();
     public void readFileExcel(){
         try {
 
