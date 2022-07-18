@@ -24,7 +24,7 @@ public class SuspentionActions extends SuspentionPage {
        switchToIframe();
        getNumberMobile().waitUntilPresent();
        writePhoneNumber(MSISDN);
-       waitABit(1000);
+       waitABit(3000);
        selectSuspentionService();
        writeJustification();
        getJustification().sendKeys(Keys.TAB,Keys.ENTER);

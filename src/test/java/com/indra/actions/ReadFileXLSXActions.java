@@ -15,6 +15,7 @@ import java.util.Iterator;
 public class ReadFileXLSXActions {
     public ArrayList<ArrayList<String>> excelArray = new ArrayList<>();
     public ArrayList<ArrayList<String>> excelArray2 = new ArrayList<>();
+
     public void readFileExcel(){
         try {
 
@@ -64,10 +65,10 @@ public class ReadFileXLSXActions {
     public void readFileExcel2(){
         try {
 
-            FileInputStream f = new FileInputStream("src/test/resources/config_data/data.xlsx");
+            FileInputStream f = new FileInputStream("src/test/resources/config_data/dataS3.xlsx");
 
             XSSFWorkbook libro = new XSSFWorkbook(f);
-            XSSFSheet hoja = libro.getSheetAt(1);
+            XSSFSheet hoja = libro.getSheetAt(0);
             Iterator<Row> filas = hoja.iterator();
             Iterator<Cell> celdas;
             Row fila;
@@ -88,12 +89,12 @@ public class ReadFileXLSXActions {
                             else{
                                 temporaryData.add(celda.getStringCellValue());
                             }
-                            //System.out.print(celda.getStringCellValue()+"  |  ");
+                           // System.out.print(celda.getStringCellValue()+"  |  ");
                             break;
                         case NUMERIC:
                             int num = (int) celda.getNumericCellValue();
-                            temporaryData.add(String.valueOf(num));
-                            //System.out.print(num+"  |  ");
+                            //temporaryData.add(String.valueOf(num));
+                            System.out.print(num+"  |  ");
                             break;
                     }
                 }
@@ -104,6 +105,6 @@ public class ReadFileXLSXActions {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //System.out.println(excelArray);
+        System.out.println(excelArray2);
     }
 }

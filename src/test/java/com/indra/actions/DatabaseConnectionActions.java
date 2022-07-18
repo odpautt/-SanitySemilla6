@@ -8,6 +8,7 @@ import java.sql.*;
 public class DatabaseConnectionActions extends DataExcelModels {
 
     public void executeAllProcedures(String msi, String msisdn) throws SQLException {
+        System.out.println(getUrlDBA());
         databaseConnectionActivator(getUrlDBA(),getPort(),getServiceA(),getUserA(),getPasswordA()
                 ,"AL_RE_ACTIVADOR", msisdn);
         databaseConnectionEpos(getUrlDBE(), getPort(), getServiceE(),getUserE(),getPasswordE()
@@ -16,15 +17,15 @@ public class DatabaseConnectionActions extends DataExcelModels {
                 ,"alistamiento_recursos_siebel", msi, msisdn);
         databaseConnectionPostsale(getUrlDBP(), getPort(), getServiceP(),getUserP(),getPasswordP()
                 ,"alistamiento_recursos_postsale", msisdn);
-        System.out.println("**** Se ejecutaran los SP para semilla 6 ****");
+        System.out.println("**** Se ejecutaran los SP para semilla 3 ****");
         // hoja 2 semilla 6
-        databaseConnectionActivator(getUrlDBA2(),getPort(),getServiceA2(),getUserA2(),getPasswordA2()
+        databaseConnectionActivator("10.69.60.103","1521","DEV11G","ACTIVATOR","ACTIVATOR"
                 ,"AL_RE_ACTIVADOR", msisdn);
-        databaseConnectionEpos(getUrlDBE2(), getPort(), getServiceE2(),getUserE2(),getPasswordE2()
+        databaseConnectionEpos("10.69.60.102", "1521","DESEPOS" ,"epos","epos"
                 ,"ali_re_epos_crm_siebel", msi, msisdn);
-        databaseConnectionSiebel(getUrlDBS2(), getPort(), getServiceS2(),getUserS2(),getPasswordS2()
+        databaseConnectionSiebel("10.65.32.76","1521" ,"SIEBEL02" ,"siebel","siebel"
                 ,"alistamiento_recursos_siebel", msi, msisdn);
-        databaseConnectionPostsale(getUrlDBP2(), getPort(), getServiceP2(),getUserP2(),getPasswordP2()
+        databaseConnectionPostsale("10.69.60.102", "1521","dev10g" ,"postsale","postsale"
                 ,"alistamiento_recursos_postsale", msisdn);
 
 
