@@ -93,6 +93,9 @@ public class PortabilityPrepaidActions extends PortabilityPrepaidPage {
         }
 
         getContinueTarife().waitUntilVisible();
+        getContinueTarife().waitUntilEnabled();
+        getContinueTarife().waitUntilClickable();
+        waitABit(2000);
         getContinueTarife().click();
         waitABit(2000);
 
@@ -380,7 +383,7 @@ public class PortabilityPrepaidActions extends PortabilityPrepaidPage {
         waitABit(1000);
         getGeneralCustomerInformation().waitUntilPresent();
 
-        WebElement plan = getDriver().findElement(By.id("j_id135:j_id157"));
+        WebElement plan = getDriver().findElement(By.id("j_id135:j_id161"));
         MatcherAssert.assertThat("el plan es prepago",
                 plan.getText(),Matchers.containsString("Plan Tigo Prepago") );
 
@@ -388,11 +391,12 @@ public class PortabilityPrepaidActions extends PortabilityPrepaidPage {
         js.executeScript("window.scrollBy(0,520)");
 
         getHlrImpre().click();
-        waitABit(2000);
+        getHlr().waitUntilClickable();
         getHlr().click();
+        waitABit(1000);
+        js.executeScript("window.scrollBy(0,820)");
 
-
-        WebElement hrl = getDriver().findElement(By.xpath("//*[@id='j_id461:j_id465']"));
+        WebElement hrl = getDriver().findElement(By.xpath("//div[@class='icePnlClpsblCnt']//textarea[1]"));
         MatcherAssert.assertThat("el hrl es ",
                 hrl.getText(),Matchers.containsString("Operation is successful") );
     }

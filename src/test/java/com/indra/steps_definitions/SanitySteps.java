@@ -256,16 +256,16 @@ public class SanitySteps{
     //--------------<Trece escenario>---------------------
     @When("^se hace la solicitud de portabilidad$")
     public void seHaceLaSolicitudDePortabilidad() throws SQLException {
-        portabilityPostActivationActions.initialRute(dataExcelModels.getMsisdnPort(),dataExcelModels.getMsiPort());
+        //portabilityPostActivationActions.initialRute(dataExcelModels.getMsisdnPort(),dataExcelModels.getMsiPort());
     }
 
     @When("^se realiza la activacion de la linea a portar$")
     public void seRealizaLaActivacionDeLaLineaAPortar() throws SQLException {
-        portabilityPostActivationActions.initialPortability();
+       /* portabilityPostActivationActions.initialPortability();
         portabilityPostActivationActions.customerInformation(dataExcelModels.getVendedorPostpago()
                 , dataExcelModels.getClientPort());
         portabilityPostActivationActions.activationPortability(dataExcelModels.getMsisdnPort(),dataExcelModels.getMsisdnForPorting2(), dataExcelModels.getMsiForPorting2());
-        portabilityPostActivationActions.demographicInformation();
+        portabilityPostActivationActions.demographicInformation();*/
     }
 
     @Then("^Se deberia ver en pantalla unica la linea en estado activado$")

@@ -72,9 +72,22 @@ public class PortabilityPostActivationActions extends PortabilityPostActivationP
         getDriver().switchTo().frame(iframe);
         enter(msisdnPort).into(getInputMsisdn());
         getBtnSolicitar().click();
-        WebElement soliNip = getDriver().findElement(By.xpath("/html/body/table/tbody/tr[2]/td/form/table/tbody/tr[2]/td/div/div[2]/table[3]/tbody/tr/td/ul/li/span"));
-//        MatcherAssert.assertThat("solicitud nip exitosa",
-//                soliNip.getText(),Matchers.containsString("Las solicitudes se procesaron") );
+
+        if (getMessage().isVisible()== true){
+            getMessage().waitUntilPresent();
+
+            System.out.println("*****************************************************************************");
+            System.out.println(getMessage().getText());
+            System.out.println("*****************************************************************************");
+
+        }
+        else {
+            WebElement soliNip = getDriver().findElement(By.xpath("//span[@class='iceMsgsError messageError']"));
+
+            System.out.println("*****************************************************************************");
+            System.out.println(soliNip.getText());
+            System.out.println("*****************************************************************************");
+        }
     }
 
     public String portId(String msisdn){
@@ -178,7 +191,8 @@ public class PortabilityPostActivationActions extends PortabilityPostActivationP
             selectNextBusinessDayFromCalendarHoliday();
             windowsScrolldown();
             waitABit(2000);
-            continuar.click();
+            WebElement continuar2 = getDriver().findElement(By.name("ActivacionesForm:btnContinuarActivacionVenta"));
+            continuar2.click();
             waitABit(5000);
         }
 
@@ -206,11 +220,22 @@ public class PortabilityPostActivationActions extends PortabilityPostActivationP
         getElectronicBill().click();
         getContinueDemo().click();
         //getContinueSale().click();
-        waitABit(10000);
+        waitABit(15000);
         //getConfirm().click();
         WebElement confirmar = getDriver().findElement(By.xpath("//*[@id='popupConfirmacionDatos:confirmarDatos']"));
         confirmar.click();
         getActivationDetails().waitUntilPresent();
+
+        WebElement codigo = getDriver().findElement(By.xpath("//div[@id='errorForm:linkPanel:content']/table/tbody/tr"));
+        WebElement descripcion = getDriver().findElement(By.xpath("//div[@id='errorForm:linkPanel:content']/table/tbody/tr[2]"));
+        String cod = codigo.getText();
+        String desc = descripcion.getText();
+
+        System.out.println("*****************************************************Codigo y Descripcion***********************************************************************************");
+        System.out.println("\n\n"+cod+"\n"+desc+"\n\n");
+        System.out.println("*****************************************************************************************************************************************");
+
+
         WebElement title = getDriver().findElement(By.className("tituloPagina"));
         MatcherAssert.assertThat("La activacion fue exitosa",title.getText(), Matchers.equalTo("ACTIVACION EXITOSA"));
     }
@@ -282,17 +307,19 @@ public class PortabilityPostActivationActions extends PortabilityPostActivationP
         enter(msisdn).into(getMsisdn2());
         getSearchButton().click();
         getGeneralCustomerInformation().waitUntilPresent();
-        WebElement plan = getDriver().findElement(By.id("j_id15:j_id29"));
 
-//        MatcherAssert.assertThat("la informacion",
-//                plan.getText(),Matchers.containsString("No se encontr") );
+
+        WebElement plan = getDriver().findElement(By.xpath("//span[@class='iceOutTxt errorText']"));
+
+        MatcherAssert.assertThat("la informacion",
+                plan.getText(),Matchers.containsString("No se encontr") );
     }
 
     public void consultSingleScreen1(String msisdn){
         getDriver().switchTo().defaultContent();
         getConsult().click();
-        getConsultPos().click();
-        getConsultIntegral().click();
+        //getConsultPos().click();
+        //getConsultIntegral().click();
         getCosultaPantallaUnica().click();
         WebElement iframe = getDriver().findElement(By.id("iframe"));
         getDriver().switchTo().frame(iframe);
@@ -301,20 +328,26 @@ public class PortabilityPostActivationActions extends PortabilityPostActivationP
         waitABit(1000);
         getGeneralCustomerInformation().waitUntilPresent();
 
-        WebElement plan = getDriver().findElement(By.id("j_id135:j_id157"));
+        WebElement plan = getDriver().findElement(By.id("j_id135:j_id161"));
         MatcherAssert.assertThat("el plan es prepago",
                 plan.getText(),Matchers.containsString("Plan Tigo Prepago") );
 
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("window.scrollBy(0,520)");
+        System.out.println("hizo la validación del plan ");
 
         getHlrImpre().click();
-        waitABit(2000);
-        getHlr().click();
+        System.out.println("pestaña activaciones");
 
-        WebElement hrl = getDriver().findElement(By.xpath("//*[@id='j_id461:j_id465']"));
+        getHlr().waitUntilClickable();
+        getHlr().click();
+        waitABit(1000);
+        js.executeScript("window.scrollBy(0,820)");
+
+        WebElement hrl = getDriver().findElement(By.xpath("//div[@class='icePnlClpsblCnt']//textarea[1]"));
         MatcherAssert.assertThat("el hrl es ",
                 hrl.getText(),Matchers.containsString("Operation is successful") );
+
     }
 
     public void validateLineTemporal(String msisdn) throws SQLException {

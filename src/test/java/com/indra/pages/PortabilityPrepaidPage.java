@@ -120,11 +120,12 @@ public class PortabilityPrepaidPage extends PageObject {
     WebElementFacade  btnSolicitar;
 
 
-    @FindBy (id = "j_id373:menu:j_id374:j_id422:j_id425:out")
+    @FindBy (xpath = "//span[text()='IMPRESO HLR']")//(id = "j_id373:menu:j_id374:j_id422:j_id425:out")
     WebElementFacade hlr;
 
-    @FindBy (xpath = "/html/body/div/div/div[4]/div/form/div[2]/div[11]/a/span")
+    @FindBy (xpath = "//span[text()='ACTIVACION']")//(xpath = "/html/body/div/div/div[4]/div/form/div[2]/div[11]/a/span")
     WebElementFacade hlrImpre;
+
 
     @FindBy(id = "ActivacionesForm:btnContinuarTarifas")
     WebElementFacade continueTarife;

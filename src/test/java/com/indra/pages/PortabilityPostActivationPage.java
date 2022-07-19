@@ -35,10 +35,10 @@ public class PortabilityPostActivationPage extends PageObject{
     @FindBy (id = "j_id15:j_id29")
     WebElementFacade generalCustomerInformation;
 
-    @FindBy (id = "j_id373:menu:j_id374:j_id422:j_id425:out")
+    @FindBy (xpath = "//span[text()='IMPRESO HLR']")//(id = "j_id373:menu:j_id374:j_id422:j_id425:out")
     WebElementFacade hlr;
 
-    @FindBy (xpath = "/html/body/div/div/div[4]/div/form/div[2]/div[11]/a/span")
+    @FindBy (xpath = "//span[text()='ACTIVACION']")//(xpath = "/html/body/div/div/div[4]/div/form/div[2]/div[11]/a/span")
     WebElementFacade hlrImpre;
 
     //------------------solicitud nip-----------------
@@ -46,14 +46,14 @@ public class PortabilityPostActivationPage extends PageObject{
     @FindBy (xpath = "/html/body/div[2]/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/div/div/div[1]/div[2]/div/div/ul/li[1]/span/a")
     WebElementFacade preventa;
 
-    @FindBy (xpath = "//*[@id='pbGac4fa497_2d8304_2d4e12_2d8e75_2d0ee02636d5e8:_viewRoot:j_id4:j_id10:j_id11:106::j_id12:handle:img:collapsed']")
-    WebElementFacade portabilidadNumerica;
+    @FindBy(xpath = "//img[contains(@id,'pbGac4fa497_2d8304_2d4e12_2d8e75_2d0ee02636d5e8:_viewRoot:j_id4:j_id10:j_id11:114::j_id12:handle:img:collapsed')]")
+    WebElementFacade  portabilidadNumerica;
 
-    @FindBy (xpath = "//*[@id='pbGac4fa497_2d8304_2d4e12_2d8e75_2d0ee02636d5e8:_viewRoot:j_id4:j_id10:j_id11:106:107::j_id14:handle:img:collapsed']")
-    WebElementFacade solicitudes;
+    @FindBy(xpath = "//img[contains(@id,'pbGac4fa497_2d8304_2d4e12_2d8e75_2d0ee02636d5e8:_viewRoot:j_id4:j_id10:j_id11:114:115::j_id14:handle:img:collapsed')]")
+    WebElementFacade  solicitudes;
 
-    @FindBy (id = "pbGac4fa497_2d8304_2d4e12_2d8e75_2d0ee02636d5e8:_viewRoot:j_id4:j_id10:j_id11:106:107:108::j_id17")
-    WebElementFacade solicitudNip;
+    @FindBy(xpath = "(//a[@href='#'][contains(@id,'id17')][contains(.,'Solicitud de NIP')])[1]")
+    WebElementFacade  solicitudNip;
 
     @FindBy (id = "frmSlctdPin:j_id20:0:j_id26")
     WebElementFacade inputMsisdn;
@@ -61,7 +61,7 @@ public class PortabilityPostActivationPage extends PageObject{
     @FindBy (id = "frmSlctdPin:j_id20:j_id40")
     WebElementFacade btnSolicitar;
 
-    @FindBy (id = "frmSlctdPin:j_id42")
+    @FindBy (xpath = "//span[@class='iceMsgsInfo messageInfo']")
     WebElementFacade message;
 
     //-----------------------------
